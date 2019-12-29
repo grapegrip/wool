@@ -1,0 +1,12 @@
+[package]
+name = "grape"
+version = "0.1.0"
+authors = ["Your Name Here <your_email@youremail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+comrak = "0.6.2"
+clap = "2.33.0"
+rouille = "3.0.0"
