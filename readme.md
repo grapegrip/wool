@@ -1,11 +1,11 @@
-# grape
+# asd
 
 Extensible [grip](https://github.com/joeyespo/grip) clone
 
 ## Usage
 ```
 USAGE:
-    grape [FLAGS] <infile> [outfile]
+    asd [FLAGS] <infile> [outfile]
 
 FLAGS:
     -e, --export     export html
@@ -20,7 +20,7 @@ ARGS:
 #### Example
 
 preview on localhost: 
-`grape readme.md` 
+`asd readme.md` 
 
 export to htm: 
-`grape readme.md --export mypreview.html`
+`asd readme.md --export mypreview.html`
