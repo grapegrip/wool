@@ -24,3 +24,8 @@ preview on localhost:
 
 export to htm: 
 `asd readme.md --export mypreview.html`
+
+###### Experimental
+
+Syntax highlighting
+`asd readme.md -h`
