@@ -19,13 +19,13 @@ ARGS:
 
 #### Example
 
-preview on localhost: 
+preview on localhost:   
 `asd readme.md` 
 
-export to htm: 
+export to html:    
 `asd readme.md --export mypreview.html`
 
 ###### Experimental
 
-Syntax highlighting
+Syntax highlighting:   
 `asd readme.md -h`
