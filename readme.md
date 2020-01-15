@@ -9,7 +9,7 @@ USAGE:
 
 FLAGS:
     -e, --export     export html
-    -h, --help       Prints help information
+        --help       Prints help information
     -V, --version    Prints version information
 
 ARGS:
