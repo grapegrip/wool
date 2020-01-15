@@ -8,13 +8,14 @@ USAGE:
     asd [FLAGS] <infile> [outfile]
 
 FLAGS:
-    -e, --export     export html
-        --help       Prints help information
-    -V, --version    Prints version information
+    -e, --export       export html
+        --help         Prints help information
+    -h, --highlight    include syntax highlighting
+    -V, --version      Prints version information
 
 ARGS:
     <infile>     Sets the input file to use
-    <outfile>    
+    <outfile>       
 ```
 
 #### Example
