@@ -22,7 +22,6 @@ pub fn format_boilerplate(filename: &str) -> String {
     }}
   </style>
 </head> 
-
 <div id=\"preview-page\" class=\"preview-page\" >
   <!-- <div id=\"readme\" 
 class=\"Box Box--condensed instapaper_body md js-code-block-container
@@ -34,14 +33,85 @@ container new-discussion-timeline experiment-repo-nav\"> -->
     <!-- <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"><path fill-rule=\"evenodd\" d=\"M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z\"/></svg> -->
     
    	<svg style=\"position: absolute; padding: 2px 0 0 1px;\" height=\"12px\" width=\"16px\" viewBox=\"2 2 13 12\" version=\"1.1\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z\"></path></svg>
-
  
     <div class=\"file-name\">
    {} 
     </h3>
   </div>
   </div>
+  <style>
+  
+ .top-bar {{
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  background-color: #f6f8fa;
+  border:1px solid rgba(27,31,35,0.15);
+  border-radius:3px 3px 0 0;
+  border-style: solid solid none;
+  margin: 64px auto 0;
+  width: 100%;
+  padding: 9px;
+  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";
+  font-weight: bold;
+  font-size: 85%;
+}}
+.file-name {{
+	margin-left: 22px;
+}}
+.markdown-body {{
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto 51px auto;
+  padding: 45px;
+  border:1px solid rgba(27,31,35,0.15);
+  border-radius:0 0 3px 3px;
+}}
+@media (max-width: 767px) {{
+  .markdown-body {{
+    padding: 15px;
+  }}
+}}
+ 
+    /*  
+     #readme {{
+                box-sizing: border-box;
+                min-width: 200px;
+                margin: 0 auto;
+                max-width: 980px;
+      }}
+      */
+    </style>
+  <body>
+    <article class=\"markdown-body\"> 
+ ", filename)
+}
 
+pub fn format_boilerplate_no_preview(_filename: &str) -> String {
+    format!(
+"
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=\"utf-8\">
+		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimal-ui\">
+		<title>GitHub Markdown CSS demo</title>
+  <style> 
+    .preview-page {{
+      margin-top: 64px;
+    }}
+    /* User-content tweaks */
+    .timeline-comment-wrapper > .timeline-comment:after,
+    .timeline-comment-wrapper > .timeline-comment:before {{
+      content: none;
+    }}
+    /* User-content overrides */
+    .discussion-timeline.wide {{
+      width: 920px;
+    }}
+  </style>
+</head>  
   <style>
   
  .top-bar {{
@@ -93,7 +163,7 @@ container new-discussion-timeline experiment-repo-nav\"> -->
     </style>
   <body>
     <article class=\"markdown-body\"> 
- ", filename)
+ ")
 }
 
 /*
@@ -1189,7 +1259,6 @@ h3 {
 
 /*
 pub static darkcss: &str = "
-    
 <style>
     /* ==UserStyle==
 @name           GitHub Dark v2.6.3
@@ -1461,7 +1530,6 @@ pub static darkcss: &str = "
     .ajax-pagination-form .ajax-pagination-d {
         background: #babdcb;
     }
-      
     .boxed-group>h3,
     .boxed-group .heading,
     .Box,
@@ -1479,12 +1547,10 @@ pub static darkcss: &str = "
     .dashboard-rollup-items .body {
         border-color: var(--border-color) !important;
     }
-    
     .dashboard .js-all-activity-header + div {
         background-color: var(--body-color) !important;
         border: 1px solid var(--border-color) !important;
     }
-    
     .boxed-group-inner {
         background: var(--body-color);
         border: 1px solid var(--border-color);
@@ -1541,9 +1607,8 @@ pub static darkcss: &str = "
     }
 
     .github-jobs-logo strong {
-        filter: invert(40%);   
+        filter: invert(40%);
     }
-    
     /* New Repo */
 
     .outline-box-highlighted {
@@ -2115,7 +2180,6 @@ pub static darkcss: &str = "
     .js-comment-edit-history > .details-overlay > summary {
         background-color: var(--accent-color);
     }
-    
     .gh-header {
         background-color: var(--body-color)
     }
@@ -2153,7 +2217,6 @@ pub static darkcss: &str = "
         border-color: var(--border-color);
         background-color: var(--body-color);
     }
-  
     .tabnav-tab.selected, .tabnav-tab[aria-selected=\"true\"] {
       background-color: var(--body-color);
       color: var(--primary-text-color);
@@ -2196,7 +2259,6 @@ pub static darkcss: &str = "
     .timeline-new-comment .timeline-comment::before {
         border-right-color: var(--border-color);
     }
-    
     .timeline-comment {
         color: var(--primary-text-color)
     }
@@ -2404,7 +2466,6 @@ pub static darkcss: &str = "
     .review-summary-form-wrapper {
         background-color: var(--body-color)
     }
-    
     .TimelineItem-break {
         background-color: var(--body-color);
         border-top: 4px solid var(--accent-color);
@@ -2608,7 +2669,6 @@ pub static darkcss: &str = "
     mark {
         color: var(--secondary-text-color);
     }
-    
     .jump-to-field-active {
         color: var(--primary-text-color) !important;
     }
@@ -2683,7 +2743,6 @@ pub static darkcss: &str = "
     .project-issue-body-blur {
         background: linear-gradient(0deg, var(--accent-color), hsla(0, 0%, 100%, 0));
     }
- 
     .bg-white {
         background-color: var(--accent-color) !important;
     }
@@ -2949,7 +3008,6 @@ pub static darkcss: &str = "
         border-color: var(--border-color);
         border-radius: 5px 5px 0px 0px;
     }
-    
     .UnderlineNav-item {
         color: var(--primary-text-color);
     }
@@ -3556,7 +3614,6 @@ pub static darkcss: &str = "
     .octotree-sidebar.octotree-github-sidebar .octotree-views {
         background-color: var(--body-color);
     }
-    
     .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-default .jstree-wholerow-clicked,
     .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-default .jstree-wholerow-hovered {
         color: var(--primary-text-color);
@@ -3573,7 +3630,6 @@ pub static darkcss: &str = "
     .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-default .jstree-no-dots .jstree-closed > .jstree-ocl::before {
         color: var(--icon-color) !important;
     }
-    
     .octotree-sidebar.octotree-github-sidebar .octotree-footer {
         background-color: var(--accent-color);
     }
@@ -3721,11 +3777,9 @@ pub static darkcss: &str = "
     }
 
     /* org fix */
-    
     .UnderlineNav {
         border-color: var(--border-color);
     }
-    
     .unstyled-members-count,
     .js-repositories-count {
         color: #FFF;
@@ -3742,7 +3796,6 @@ pub static darkcss: &str = "
     .stats-group-stat {
         border-color: var(--border-color) !important;
     }
-    
     /* blog */
 
     .blog-post-title a {

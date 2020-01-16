@@ -1,6 +1,6 @@
 [package]
 name = "asd"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Your Name Here <your_email@youremail.com>"]
 edition = "2018"
 
