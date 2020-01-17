@@ -25,9 +25,9 @@ pub fn get_cli_matches<'a>() -> ArgMatches<'static> {
         )
         .arg(
             Arg::with_name("highlight")
-                .short("h")
+                .short("s")
                 .long("highlight")
-                .help("include syntax highlighting"),
+                .help("syntax highlighting"),
         )
         .arg(Arg::with_name("outfile").help("tmp"))
         .get_matches()
