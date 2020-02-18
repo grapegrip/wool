@@ -1,0 +1,25 @@
+[package]
+name = "wool"
+version = "0.1.1"
+authors = ["Your Name Here <your_email@youremail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+comrak = "0.6.2"
+clap = "2.33.0"
+url = "2.1.1"
+log            = "0.4"
+notify         = "5.0.0-pre.2"
+# tokio = { version = "0.2", features = ["full"] }
+tokio-fs        = "0.2.0-alpha.6"
+tokio-io        = "0.2.0-alpha.6"
+tokio-sync      = "0.2.0-alpha.6"
+tokio = { version = "0.2", default-features = false, features = [] }
+hyper = { version = "0.13", default-features = false, features = ["runtime"] }
+
+hyper-staticfile = "0.5"
+
+[dependencies.http]
+version = "0.2.0"
