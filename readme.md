@@ -1,6 +1,10 @@
 # wool
 Extensible [grip](https://github.com/joeyespo/grip) clone
 
+## Installation 
+
+`cargo install wool` 
+
 ## Usage
 ```
 USAGE:
