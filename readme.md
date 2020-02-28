@@ -32,6 +32,9 @@ preview on localhost:
 export to html:    
 `wool readme.md --export mypreview.html`
 
+equations with katex:   
+`wool readme.md -k`
+
 ###### Experimental
 
 Syntax highlighting:   
