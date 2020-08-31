@@ -4,7 +4,7 @@ pub fn get_cli_matches<'a>() -> ArgMatches<'static> {
     App::new("ynot")
         .version("0.1")
         .author("m")
-        .about("readme")
+        .about("See https://github.com/grapegrip/wool")
         .arg(
             Arg::with_name("infile")
                 .help("Sets the input file to use")
