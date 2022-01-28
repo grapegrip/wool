@@ -242,7 +242,7 @@ fn spawn_watcher(updaters: SenderListPtr) -> notify::Result<RecommendedWatcher> 
     let cwd = env::current_dir().unwrap(); 
     let md_file_name = cwd.join(&(matches.value_of("infile").unwrap())).to_owned(); 
     let mut file_event_watcher: RecommendedWatcher =
-        Watcher::new_immediate(move |event: notify::Result<Event>| {
+        RecommendedWatcher::new(move |event: notify::Result<Event>| {
             let event = match event {
                 Ok(ev) => ev,
                 Err(e) => {
